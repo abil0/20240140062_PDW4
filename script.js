@@ -1,21 +1,18 @@
-// 1. Menampilkan Tanggal Otomatis (Wajib D Kapital)
-function initWeb() {
-    const elTanggal = document.getElementById("tanggal");
-    const sekarang = new Date();
-    
-    // Format tanggal yang rapi
-    const options = { weekday: 'long', day: 'numeric', month: 'short', year: 'numeric' };
-    elTanggal.innerHTML = "Today: " + sekarang.toLocaleDateString('en-US', options);
+
+function displayDate() {
+    const el = document.getElementById("tanggal");
+    const d = new Date(); // D kapital
+    const options = { day: 'numeric', month: 'long', year: 'numeric' };
+    el.innerHTML = "EST. " + d.toLocaleDateString('id-ID', options);
 }
+displayDate();
 
-initWeb();
 
-// 2. Alert Tampil (Syarat Modul)
 function tampil() {
-    alert("☕ GOLDEN VOUCHER ☕\n\nSelamat! Anda mendapatkan diskon 50% untuk pembelian kedua.\nBerlaku hanya untuk hari ini!");
+    alert("🌟 COFFEBILLS EXCLUSIVE 🌟\n\nSelamat! Anda diundang menjadi member premium. Dapatkan akses ke CEO Lounge setiap hari!");
 }
 
-// 3. Alert Show (Syarat Perkenalan Modul)
+
 function show() {
-    alert("MEET THE OWNER\n\nNabil Rafif\nNIM: 20240140062\n\n'Our coffee are the best in the world.'");
+    alert("OFFICIAL FOUNDER\n\nNama: Nabil Rafif\nNIM: 20240140062\n\n'Success is brewed with hard work and a lot of caffeine.'");
 }
