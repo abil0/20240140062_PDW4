@@ -1,18 +1,21 @@
-
-function renderTime() {
-    const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit' };
-    const hariIni = new Date();
+// 1. Menampilkan Tanggal Otomatis (Wajib D Kapital)
+function initWeb() {
+    const elTanggal = document.getElementById("tanggal");
+    const sekarang = new Date();
     
-   
-    document.getElementById("tanggal").innerHTML = "🕒 " + hariIni.toLocaleDateString('id-ID', options);
+    // Format tanggal yang rapi
+    const options = { weekday: 'long', day: 'numeric', month: 'short', year: 'numeric' };
+    elTanggal.innerHTML = "Today: " + sekarang.toLocaleDateString('en-US', options);
 }
 
-renderTime();
+initWeb();
 
+// 2. Alert Tampil (Syarat Modul)
 function tampil() {
-    alert("✨ PROMO KHUSUS DEVELOPER ✨\nTunjukkan kode ini: 'KopiAsix6'\nDiskon 30% untuk Caramel Macchiato hari ini!");
+    alert("☕ GOLDEN VOUCHER ☕\n\nSelamat! Anda mendapatkan diskon 50% untuk pembelian kedua.\nBerlaku hanya untuk hari ini!");
 }
 
+// 3. Alert Show (Syarat Perkenalan Modul)
 function show() {
-    alert("👨‍🍳 BARISTA INFO\nNama: Nabil Rafif\nNIM: 20240140062\nSpesialisasi: manual brew.");
+    alert("MEET THE OWNER\n\nNabil Rafif\nNIM: 20240140062\n\n'Our coffee are the best in the world.'");
 }
